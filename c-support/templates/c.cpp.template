@@ -165,7 +165,7 @@ class |?CLASSNAME:c| {
 }; /* -----  end of class |CLASSNAME|  ----- */
 
 == C++.class using new == map:+cn, shortcut:n ==
-class |?CLASSNAME| {
+class |?CLASSNAME:c| {
  public:
   |CLASSNAME|();
 
@@ -185,7 +185,7 @@ class |?CLASSNAME| {
 
 == C++.template class == map:+tc, shortcut:t ==
 template < class T >
-class |?CLASSNAME| {
+class |?CLASSNAME:c| {
  public:
   |CLASSNAME|();
 
@@ -199,7 +199,7 @@ class |?CLASSNAME| {
 
 == C++.template class using new == map:+tcn, shortcut:n ==
 template < class T >
-class |?CLASSNAME| {
+class |?CLASSNAME:c| {
  public:
   |CLASSNAME|();
 
@@ -218,99 +218,54 @@ class |?CLASSNAME| {
 }; /* -----  end of template class |CLASSNAME|  ----- */
 
 == C++.error class == map:+ec, shortcut:e ==
-/*
- * =====================================================================================
- *        Class:  |?CLASSNAME:c|
- *  Description:  <CURSOR>
- * =====================================================================================
- */
-class |CLASSNAME|
-{
-  public:     |CLASSNAME| ( string msg = "|CLASSNAME|" ):message(msg)  { }
-              virtual ~|CLASSNAME| ( )  { }
-              virtual string what ( ) const throw ( )  { return message; }
-  protected:  string  message;
+class |?CLASSNAME:c| {
+ public:
+  |CLASSNAME|(string msg = "|CLASSNAME|")
+   :message(msg)  { }
+
+  virtual ~|CLASSNAME|( ) { }
+
+ virtual string what( ) const throw ( ) { return message; }
+
+ protected:
+  string message;
+
 }; /* -----  end of class |CLASSNAME|  ----- */
 
 == C++.IMPLEMENTATION.class == map:+ic , shortcut:c ==
-/*
- *--------------------------------------------------------------------------------------
- *       Class:  |?CLASSNAME:c|
- *      Method:  |CLASSNAME|
- * Description:  constructor
- *--------------------------------------------------------------------------------------
- */
-|CLASSNAME|::|CLASSNAME| ()
-{<CURSOR>
+|?CLASSNAME:c|::|CLASSNAME|() {
+  <CURSOR>
 }  /* -----  end of method |CLASSNAME|::|CLASSNAME|  (constructor)  ----- */
 
 == C++.IMPLEMENTATION.class using new == map:+icn , shortcut:n ==
-/*
- *--------------------------------------------------------------------------------------
- *       Class:  |?CLASSNAME:c|
- *      Method:  |CLASSNAME|
- * Description:  constructor
- *--------------------------------------------------------------------------------------
- */
-|CLASSNAME|::|CLASSNAME| ()
-{<CURSOR>
+|?CLASSNAME:c|::|CLASSNAME|() {
+  <CURSOR>
 }  /* -----  end of method |CLASSNAME|::|CLASSNAME|  (constructor)  ----- */
 
-/*
- *--------------------------------------------------------------------------------------
- *       Class:  |CLASSNAME|
- *      Method:  |CLASSNAME|
- * Description:  copy constructor
- *--------------------------------------------------------------------------------------
- */
-|CLASSNAME|::|CLASSNAME| ( const |CLASSNAME| &other )
-{
+|CLASSNAME|::|CLASSNAME|(const |CLASSNAME| &other) {
 }  /* -----  end of method |CLASSNAME|::|CLASSNAME|  (copy constructor)  ----- */
 
-/*
- *--------------------------------------------------------------------------------------
- *       Class:  |CLASSNAME|
- *      Method:  ~|CLASSNAME|
- * Description:  destructor
- *--------------------------------------------------------------------------------------
- */
-|CLASSNAME|::~|CLASSNAME| ()
-{
+|CLASSNAME|::~|CLASSNAME|() {
 }  /* -----  end of method |CLASSNAME|::~|CLASSNAME|  (destructor)  ----- */
 
-/*
- *--------------------------------------------------------------------------------------
- *       Class:  |CLASSNAME|
- *      Method:  operator =
- * Description:  assignment operator
- *--------------------------------------------------------------------------------------
- */
 |CLASSNAME|&
-|CLASSNAME|::operator = ( const |CLASSNAME| &other )
-{
-  if ( this != &other ) {
+|CLASSNAME|::operator = (const |CLASSNAME| &other) {
+  if(this != &other) {
   }
+
   return *this;
 }  /* -----  end of method |CLASSNAME|::operator =  (assignment operator)  ----- */
 
 == C++.IMPLEMENTATION.method == map:+im , shortcut:m ==
 void<CURSOR>
-|?CLASSNAME|::|?METHODNAME| ( <+argument_list+> )
-{
-	return ;
+|?CLASSNAME|::|?METHODNAME|( <+argument_list+>) {
+  return ;
 }		/* -----  end of method |CLASSNAME|::|?METHODNAME|  ----- */
 
 == C++.IMPLEMENTATION.accessor == map:+ia , shortcut:a ==
-/*
- *--------------------------------------------------------------------------------------
- *       Class:  |?CLASSNAME|
- *      Method:  get_|?ATTRIBUTE|
- *--------------------------------------------------------------------------------------
- */
 inline |?RETURNTYPE|
-|CLASSNAME|::get_|ATTRIBUTE| (  ) const
-{
-	return |ATTRIBUTE|;
+|?CLASSNAME|::get_|ATTRIBUTE|(  ) const {
+  return |ATTRIBUTE|;
 }		/* -----  end of method |CLASSNAME|::get_|ATTRIBUTE|  ----- */
 
 /*
