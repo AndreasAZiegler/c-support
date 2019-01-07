@@ -152,10 +152,11 @@ ios::|PICK|<CURSOR>
 == ENDTEMPLATE ==
 
 == C++.class == map:+c, shortcut:c ==
-class |CLASSNAME| {
-{
+class |?CLASSNAME| {
  public:
-  |CLASSNAME| ();
+  |CLASSNAME|();
+
+  <CURSOR> 
 
  protected:
 
@@ -164,15 +165,17 @@ class |CLASSNAME| {
 }; /* -----  end of class |CLASSNAME|  ----- */
 
 == C++.class using new == map:+cn, shortcut:n ==
-class |CLASSNAME| {
+class |?CLASSNAME| {
  public:
-  |CLASSNAME| ();
+  |CLASSNAME|();
 
-  |CLASSNAME| ( const |CLASSNAME| &other );
+  |CLASSNAME|(const |CLASSNAME| &other);
 
-  ~|CLASSNAME| ();
+  ~|CLASSNAME|();
 
-  |CLASSNAME|& operator = ( const |CLASSNAME| &other ); /* assignment operator */
+  |CLASSNAME|& operator = (const |CLASSNAME| &other);
+
+  <CURSOR> 
 
  protected:
 
@@ -181,71 +184,36 @@ class |CLASSNAME| {
 }; /* -----  end of class |CLASSNAME|  ----- */
 
 == C++.template class == map:+tc, shortcut:t ==
-/*
- * =====================================================================================
- *        Class:  |?CLASSNAME:c|
- *  Description:  <CURSOR>
- * =====================================================================================
- */
 template < class T >
-class |CLASSNAME|
-{
-  public:
-    /* ====================  LIFECYCLE     ======================================= */
-    |CLASSNAME| ();                             /* constructor */
+class |?CLASSNAME| {
+ public:
+  |CLASSNAME|();
 
-		/* ====================  ACCESSORS     ======================================= */
+  <CURSOR> 
 
-		/* ====================  MUTATORS      ======================================= */
+ protected:
 
-		/* ====================  OPERATORS     ======================================= */
-
-  protected:
-		/* ====================  METHODS       ======================================= */
-
-    /* ====================  DATA MEMBERS  ======================================= */
-
-  private:
-		/* ====================  METHODS       ======================================= */
-
-    /* ====================  DATA MEMBERS  ======================================= */
+ private:
 
 }; /* ----------  end of template class |CLASSNAME|  ---------- */
 
 == C++.template class using new == map:+tcn, shortcut:n ==
-/* 
- * =====================================================================================
- *        Class:  |?CLASSNAME:c|
- *  Description:  <CURSOR>
- * =====================================================================================
- */
-
 template < class T >
-class |CLASSNAME|
-{
-  public:
-    // ====================  LIFECYCLE     =======================================
-    |CLASSNAME| ();                           /* constructor      */
-    |CLASSNAME| ( const |CLASSNAME| &other ); /* copy constructor */
-    ~|CLASSNAME| ();                          /* destructor       */
+class |?CLASSNAME| {
+ public:
+  |CLASSNAME|();
 
-		/* ====================  ACCESSORS     ======================================= */
+  |CLASSNAME|(const |CLASSNAME| &other);
 
-		/* ====================  MUTATORS      ======================================= */
+  ~|CLASSNAME|();
 
-		/* ====================  OPERATORS     ======================================= */
+  |CLASSNAME|& operator = ( const |CLASSNAME| &other );
 
-    |CLASSNAME|& operator = ( const |CLASSNAME| &other ); // assignment operator
+  <CURSOR> 
 
-  protected:
-		/* ====================  METHODS       ======================================= */
+ protected:
 
-    /* ====================  DATA MEMBERS  ======================================= */
-
-  private:
-		/* ====================  METHODS       ======================================= */
-
-    /* ====================  DATA MEMBERS  ======================================= */
+ private:
 
 }; /* -----  end of template class |CLASSNAME|  ----- */
 
