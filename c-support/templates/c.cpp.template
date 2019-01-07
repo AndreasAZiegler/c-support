@@ -152,7 +152,7 @@ ios::|PICK|<CURSOR>
 == ENDTEMPLATE ==
 
 == C++.class == map:+c, shortcut:c ==
-class |?CLASSNAME| {
+class |?CLASSNAME:c| {
  public:
   |CLASSNAME|();
 
