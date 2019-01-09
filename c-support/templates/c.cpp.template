@@ -151,7 +151,7 @@
 ios::|PICK|<CURSOR>
 == ENDTEMPLATE ==
 
-== C++.class == map:+c, shortcut:c ==
+== C++.class == noindent, map:+c, shortcut:c ==
 class |?CLASSNAME:c| {
  public:
   |CLASSNAME|();
@@ -164,7 +164,7 @@ class |?CLASSNAME:c| {
 
 }; /* -----  end of class |CLASSNAME|  ----- */
 
-== C++.class using new == map:+cn, shortcut:n ==
+== C++.class using new == noindent, map:+cn, shortcut:n ==
 class |?CLASSNAME:c| {
  public:
   |CLASSNAME|();
@@ -183,7 +183,7 @@ class |?CLASSNAME:c| {
 
 }; /* -----  end of class |CLASSNAME|  ----- */
 
-== C++.template class == map:+tc, shortcut:t ==
+== C++.template class == noindent, map:+tc, shortcut:t ==
 template < class T >
 class |?CLASSNAME:c| {
  public:
@@ -197,7 +197,7 @@ class |?CLASSNAME:c| {
 
 }; /* ----------  end of template class |CLASSNAME|  ---------- */
 
-== C++.template class using new == map:+tcn, shortcut:n ==
+== C++.template class using new == noindent, map:+tcn, shortcut:n ==
 template < class T >
 class |?CLASSNAME:c| {
  public:
@@ -217,7 +217,7 @@ class |?CLASSNAME:c| {
 
 }; /* -----  end of template class |CLASSNAME|  ----- */
 
-== C++.error class == map:+ec, shortcut:e ==
+== C++.error class == noindent, map:+ec, shortcut:e ==
 class |?CLASSNAME:c| {
  public:
   |CLASSNAME|(string msg = "|CLASSNAME|")
@@ -232,12 +232,12 @@ class |?CLASSNAME:c| {
 
 }; /* -----  end of class |CLASSNAME|  ----- */
 
-== C++.IMPLEMENTATION.class == map:+ic , shortcut:c ==
+== C++.IMPLEMENTATION.class == noindent, map:+ic , shortcut:c ==
 |?CLASSNAME:c|::|CLASSNAME|() {
   <CURSOR>
 }  /* -----  end of method |CLASSNAME|::|CLASSNAME|  (constructor)  ----- */
 
-== C++.IMPLEMENTATION.class using new == map:+icn , shortcut:n ==
+== C++.IMPLEMENTATION.class using new == noindent, map:+icn , shortcut:n ==
 |?CLASSNAME:c|::|CLASSNAME|() {
   <CURSOR>
 }  /* -----  end of method |CLASSNAME|::|CLASSNAME|  (constructor)  ----- */
@@ -256,13 +256,13 @@ class |?CLASSNAME:c| {
   return *this;
 }  /* -----  end of method |CLASSNAME|::operator =  (assignment operator)  ----- */
 
-== C++.IMPLEMENTATION.method == map:+im , shortcut:m ==
+== C++.IMPLEMENTATION.method == noindent, map:+im , shortcut:m ==
 void<CURSOR>
 |?CLASSNAME|::|?METHODNAME|( <+argument_list+>) {
   return ;
 }		/* -----  end of method |CLASSNAME|::|?METHODNAME|  ----- */
 
-== C++.IMPLEMENTATION.accessor == map:+ia , shortcut:a ==
+== C++.IMPLEMENTATION.accessor == noindent, map:+ia , shortcut:a ==
 inline |?RETURNTYPE|
 |?CLASSNAME|::get_|ATTRIBUTE|(  ) const {
   return |ATTRIBUTE|;
